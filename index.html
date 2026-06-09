@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <title>Leandro Sesto | Automatizaciones con Python y Google Apps Script</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Desarrollo automatizaciones y agentes con Python y Google Sheets para ahorrar tiempo, eliminar errores y agilizar tus procesos de negocio.">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sites.google.com/view/leandrosesto/automatizaciones">
+  <meta property="og:title" content="Leandro Sesto | Automatizaciones Profesionales">
+  <meta property="og:description" content="Automatiza el procesamiento de datos de tu empresa con Python y Google Apps Script.">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="https://www.gstatic.com/images/branding/productlogos/sites_2026/v2/ico/sites_2026_16dp.ico" type="image/x-icon">
+  
+  <!-- FontAwesome Icons for clean SVG icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Background Canvas for Interactive Particles -->
+  <canvas id="canvas-bg" class="hero-canvas"></canvas>
+
+  <!-- ==========================================================================
+       NAVBAR
+       ========================================================================== -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="#hero" class="logo">
+        <span class="logo-icon"></span>Leandro Sesto
+      </a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#hero" class="nav-link active">Inicio</a></li>
+        <li><a href="#problemas" class="nav-link">Desafíos</a></li>
+        <li><a href="#portafolio" class="nav-link">Casos de Éxito</a></li>
+        <li><a href="#sobre-mi" class="nav-link">Sobre Mí</a></li>
+        <li><a href="#contacto" class="nav-link">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ==========================================================================
+       HERO SECTION
+       ========================================================================== -->
+  <header id="hero" class="hero">
+    <div class="glow-blob blob-1"></div>
+    <div class="glow-blob blob-2"></div>
+    
+    <div class="container">
+      <div class="hero-content reveal active">
+        <div class="badge-wrapper">
+          <span class="tech-badge"><i class="fa-brands fa-python"></i> Python Developer</span>
+          <span class="tech-badge cyan"><i class="fa-brands fa-google"></i> Google Apps Script</span>
+        </div>
+        <h1 class="hero-title">
+          Optimiza tu negocio eliminando las <span class="text-gradient">tareas manuales</span>
+        </h1>
+        <p class="hero-description">
+          Desarrollo soluciones de automatización a medida con Python y Google Scripts. Conecta tus sistemas, elimina fallas operativas y libera a tu equipo para lo verdaderamente estratégico.
+        </p>
+        <div class="cta-group">
+          <a href="https://wa.me/2235449927" target="_blank" class="btn btn-whatsapp">
+            <i class="fa-brands fa-whatsapp"></i> Escríbeme por WhatsApp
+          </a>
+          <a href="mailto:leandromsesto@gmail.com" class="btn btn-secondary">
+            <i class="fa-regular fa-envelope"></i> Enviar un Email
+          </a>
+        </div>
+      </div>
+      
+      <div class="hero-visual reveal active">
+        <div class="code-window">
+          <div class="code-header">
+            <span class="dot dot-red"></span>
+            <span class="dot dot-yellow"></span>
+            <span class="dot dot-green"></span>
+            <span class="code-title">automation_agent.py</span>
+          </div>
+          <div class="code-content">
+            <span class="code-line"><span class="keyword">import</span> gspread</span>
+            <span class="code-line"><span class="keyword">import</span> automation</span>
+            <span class="code-line">&nbsp;</span>
+            <span class="code-line"><span class="comment"># Flujo automatizado de datos</span></span>
+            <span class="code-line"><span class="keyword">def</span> <span class="func">procesar_flujo_datos</span>(origen_datos):</span>
+            <span class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;print(<span class="string">"Leyendo registros..."</span>)</span>
+            <span class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;datos = origen_datos.get_all()</span>
+            <span class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment"># Limpieza y validación automática</span></span>
+            <span class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;datos_limpios = validar(datos)</span>
+            <span class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;print(<span class="string">"Sincronizando sistemas..."</span>)</span>
+            <span class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;resultado = base_datos.save(datos_limpios)</span>
+            <span class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;notificar_exito(<span class="string">"Sincronización Completada 🎉"</span>)</span>
+            <span class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span> resultado</span>
+            <span class="code-line">&nbsp;</span>
+            <span class="code-line">procesar_flujo_datos(planilla_sheets)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       PROBLEMS SECTION
+       ========================================================================== -->
+  <section id="problemas" class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-subtitle">Diagnóstico Inicial</span>
+        <h2 class="section-title">El costo invisible del trabajo manual</h2>
+        <p>Hacer tareas repetitivas a mano no solo frena el crecimiento de tu empresa, sino que introduce ineficiencias críticas.</p>
+      </div>
+      
+      <div class="problems-grid">
+        <!-- Problem 1 -->
+        <div class="problem-card reveal">
+          <div class="problem-icon">
+            <i class="fa-solid fa-circle-nodes"></i>
+          </div>
+          <h3 class="problem-title">Pérdida de Tiempo</h3>
+          <p class="problem-text">Tu equipo invierte horas valiosas copiando y pegando información entre planillas de cálculo Excel, bases de datos o sistemas de gestión internos.</p>
+        </div>
+        
+        <!-- Problem 2 -->
+        <div class="problem-card reveal">
+          <div class="problem-icon">
+            <i class="fa-solid fa-triangle-exclamation"></i>
+          </div>
+          <h3 class="problem-title">Errores Operativos</h3>
+          <p class="problem-text">Los procesos manuales son propensos a equivocaciones humanas inevitables en la carga de datos, lo que afecta directamente el control de costos y la toma de decisiones.</p>
+        </div>
+        
+        <!-- Problem 3 -->
+        <div class="problem-card reveal">
+          <div class="problem-icon">
+            <i class="fa-solid fa-hourglass-half"></i>
+          </div>
+          <h3 class="problem-title">Crecimiento Estancado</h3>
+          <p class="problem-text">Los cuellos de botella administrativos ralentizan la entrega de documentación e impiden que el personal se enfoque en tareas de innovación o ventas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       PORTFOLIO (SUCCESS CASES) SECTION
+       ========================================================================== -->
+  <section id="portafolio" class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-subtitle">Casos de Éxito</span>
+        <h2 class="section-title">Soluciones que liberan el potencial de tu negocio</h2>
+        <p>Ejemplos reales de procesos manuales complejos y lentos que fueron transformados en flujos de trabajo autónomos, seguros y eficientes.</p>
+      </div>
+      
+      <div class="portfolio-list">
+        <!-- Item 1 -->
+        <div class="portfolio-item reveal">
+          <div class="portfolio-info">
+            <span class="portfolio-tag">Desarrollo Web & Bases de Datos</span>
+            <h3 class="portfolio-name">Dashboard Técnico</h3>
+            <p class="portfolio-description">
+              Migración de planillas tradicionales a un sistema centralizado inter-áreas. Conectamos la información de distintos departamentos en tiempo real bajo una base de datos segura y una interfaz ágil. Se eliminaron procesos manuales redundantes y se agilizó el flujo de comunicación.
+            </p>
+            <div class="benefit-box">
+              <div class="benefit-icon">
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
+              <div class="benefit-text">
+                <h4>Impacto Comercial</h4>
+                <p>Digitalización total de procesos, eliminación del papel, trazabilidad absoluta y reducción del tiempo de consulta interna a segundos.</p>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-visual">
+            <img src="assets/dashboard_mockup.png" alt="Dashboard Técnico" class="portfolio-img">
+          </div>
+        </div>
+        
+        <!-- Item 2 -->
+        <div class="portfolio-item reveal">
+          <div class="portfolio-visual">
+            <img src="assets/folders_mockup.png" alt="Creador de Carpetas" class="portfolio-img">
+          </div>
+          <div class="portfolio-info">
+            <span class="portfolio-tag">Automatización de Escritorio</span>
+            <h3 class="portfolio-name">Creador de Carpetas</h3>
+            <p class="portfolio-description">
+              Generador automático de estructuras de almacenamiento. Software a medida que procesa listados de texto o extrae datos desde capturas de pantalla para estructurar y crear cientos de directorios de clientes organizados al instante.
+            </p>
+            <div class="benefit-box">
+              <div class="benefit-icon">
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
+              <div class="benefit-text">
+                <h4>Impacto Comercial</h4>
+                <p>Recuperación de decenas de horas mensuales de trabajo administrativo rutinario. Estandarización total y prolijidad en el almacenamiento.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Item 3 -->
+        <div class="portfolio-item reveal">
+          <div class="portfolio-info">
+            <span class="portfolio-tag">Procesamiento de Documentos</span>
+            <h3 class="portfolio-name">Generador de Expedientes</h3>
+            <p class="portfolio-description">
+              Compilador inteligente de expedientes PDF. Sistema que automatiza el ensamblaje, ordenamiento y numeración de archivos. Cuenta con un motor de validación lógica para comprobar la existencia de documentos requeridos (como facturas) antes de cerrar el expediente.
+            </p>
+            <div class="benefit-box">
+              <div class="benefit-icon">
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
+              <div class="benefit-text">
+                <h4>Impacto Comercial</h4>
+                <p>100% de precisión y control en la preparación de expedientes oficiales entregados a clientes, reduciendo auditorías o devoluciones por errores humanos.</p>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-visual">
+            <img src="assets/pdf_mockup.png" alt="Generador de Expedientes" class="portfolio-img">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       ABOUT ME SECTION
+       ========================================================================== -->
+  <section id="sobre-mi" class="section">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-visual reveal">
+          <div class="about-img-wrapper">
+            <img src="assets/developer_avatar.png" alt="Leandro Sesto Desarrollador" class="about-avatar">
+          </div>
+        </div>
+        
+        <div class="about-info reveal">
+          <span class="section-subtitle">Perfil del Desarrollador</span>
+          <h2 class="section-title">Sobre mí</h2>
+          <p class="about-text">
+            Soy Leandro Sesto, programador de agentes de automatización utilizando Python y las herramientas del ecosistema Google (Sheets, Drive, Apps Script). Mi enfoque está orientado 100% al valor empresarial: me concentro en analizar y modelar procesos para eliminar la ineficiencia, transformándolos en flujos autónomos que le devuelven tiempo productivo a tu equipo.
+          </p>
+          
+          <h3 class="skills-title">Herramientas y Competencias</h3>
+          <div class="skills-list">
+            <span class="skill-tag"><i class="fa-brands fa-python"></i> Python (ETL / Automatización)</span>
+            <span class="skill-tag"><i class="fa-brands fa-google"></i> Google Apps Script</span>
+            <span class="skill-tag"><i class="fa-solid fa-table"></i> Google Sheets & APIs</span>
+            <span class="skill-tag"><i class="fa-solid fa-database"></i> Integración de Sistemas</span>
+            <span class="skill-tag"><i class="fa-solid fa-file-invoice-dollar"></i> Procesamiento PDF y OCR</span>
+            <span class="skill-tag"><i class="fa-solid fa-robot"></i> Agentes Autónomos</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       CONTACT SECTION
+       ========================================================================== -->
+  <section id="contacto" class="section">
+    <div class="container">
+      <div class="contact-card reveal">
+        <span class="section-subtitle">¿Empezamos?</span>
+        <h2 class="contact-title">Solicita un Diagnóstico de Procesos Gratuito</h2>
+        <p class="contact-description">
+          Conversemos durante 15 minutos para analizar qué tarea manual te está consumiendo tiempo. Evaluaré tu proceso y te propondré la mejor arquitectura técnica para automatizarlo de forma escalable.
+        </p>
+        
+        <div class="contact-actions">
+          <a href="https://wa.me/2235449927" target="_blank" class="btn btn-whatsapp">
+            <i class="fa-brands fa-whatsapp"></i> Escríbeme por WhatsApp
+          </a>
+          
+          <div class="email-copy-wrapper">
+            <div class="email-btn-group">
+              <a href="mailto:leandromsesto@gmail.com" class="email-link" id="email-link">
+                <i class="fa-regular fa-envelope"></i> leandromsesto@gmail.com
+              </a>
+              <button class="btn-copy" id="btn-copy" aria-label="Copiar email" title="Copiar email al portapapeles">
+                <i class="fa-regular fa-copy"></i>
+              </button>
+            </div>
+            <span class="tooltip" id="copy-tooltip">¡Copiado!</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-brand">
+        <span></span> Leandro Sesto | Automatizaciones
+      </div>
+      <div class="footer-copy">
+        &copy; 2026 - Idea y Desarrollo por Leandro Sesto. Todos los derechos reservados.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Custom JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
