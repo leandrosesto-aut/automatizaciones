@@ -965,6 +965,255 @@ img {
 }
 
 /* ==========================================================================
+   BG LIGHT ALTERNATE SECTION
+   ========================================================================== */
+.bg-light-alt {
+  background: #f8fafc;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+/* ==========================================================================
+   HERO TRUST INDICATORS
+   ========================================================================== */
+.hero-trust-indicator {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 24px;
+}
+
+.hero-trust-indicator span {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 500;
+}
+
+.hero-trust-indicator i {
+  color: var(--secondary);
+  font-size: 0.9rem;
+}
+
+
+/* ==========================================================================
+   PORTFOLIO METRICS
+   ========================================================================== */
+.portfolio-metrics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.portfolio-metric-badge {
+  background: var(--primary-glow);
+  border: 1px solid rgba(79, 70, 229, 0.15);
+  color: var(--primary);
+  padding: 6px 14px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  border-radius: var(--radius-sm);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.portfolio-item:nth-child(even) .portfolio-metric-badge {
+  background: var(--secondary-glow);
+  border-color: rgba(13, 148, 136, 0.15);
+  color: var(--secondary);
+}
+
+/* ==========================================================================
+   FAQS ACCORDION SECTION
+   ========================================================================== */
+.faq-accordion {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.faq-item {
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.faq-item:hover {
+  border-color: #cbd5e1;
+  box-shadow: var(--shadow-sm);
+}
+
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 24px;
+  text-align: left;
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.faq-question i {
+  color: var(--text-muted);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  font-size: 0.9rem;
+}
+
+.faq-question[aria-expanded="true"] i {
+  transform: rotate(180deg);
+  color: var(--primary);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.faq-answer-inner {
+  padding: 0 24px 24px 24px;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   B2B CONTACT GRID & FORM
+   ========================================================================== */
+.contact-grid-layout {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 60px;
+  text-align: left;
+  align-items: start;
+}
+
+.contact-info {
+  padding-top: 10px;
+}
+
+.contact-info .contact-title {
+  font-size: 2.25rem;
+  font-weight: 800;
+  margin-bottom: 16px;
+  letter-spacing: -0.5px;
+}
+
+.contact-info .contact-description {
+  margin: 0 0 40px 0;
+  font-size: 1.1rem;
+}
+
+.contact-actions-vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 380px;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.contact-form-wrapper {
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  box-shadow: var(--shadow-md);
+  position: relative;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.form-input {
+  background: #f8fafc;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: 12px 16px;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  transition: var(--transition);
+  outline: none;
+}
+
+.form-input::placeholder {
+  color: #94a3b8;
+}
+
+.form-input:focus {
+  background: #ffffff;
+  border-color: var(--primary);
+  box-shadow: var(--shadow-glow-blue);
+}
+
+.form-textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.form-success-message {
+  text-align: center;
+  padding: 40px 10px;
+  animation: fadeIn 0.4s ease;
+}
+
+.success-icon {
+  font-size: 3rem;
+  color: var(--secondary);
+  margin-bottom: 16px;
+}
+
+.form-success-message h3 {
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+  color: var(--text-primary);
+}
+
+.form-success-message p {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ==========================================================================
    RESPONSIVE DESIGN (MEDIA QUERIES)
    ========================================================================== */
 @media (max-width: 1024px) {
@@ -981,6 +1230,10 @@ img {
   }
   
   .about-grid {
+    gap: 40px;
+  }
+  
+  .contact-grid-layout {
     gap: 40px;
   }
 }
@@ -1130,5 +1383,26 @@ img {
   .footer .container {
     flex-direction: column;
     text-align: center;
+  }
+
+  
+  /* Contact Responsive */
+  .contact-grid-layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .contact-info {
+    text-align: center;
+    padding-top: 0;
+  }
+  
+  .contact-actions-vertical {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  
+  .hero-trust-indicator {
+    justify-content: center;
   }
 }
