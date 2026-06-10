@@ -48,7 +48,7 @@
   <nav class="navbar" id="navbar">
     <div class="container">
       <a href="#hero" class="logo">
-        <span class="logo-icon"></span>Leandro Sesto | Automatizaciones
+        <span class="logo-icon"></span>Leandro Sesto
       </a>
       <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú">
         <i class="fa-solid fa-bars"></i>
@@ -89,6 +89,11 @@
           <a href="mailto:leandromsesto@gmail.com" class="btn btn-secondary">
             <i class="fa-regular fa-envelope"></i> Enviar un Email
           </a>
+        </div>
+        <div class="hero-trust-indicator">
+          <span><i class="fa-solid fa-check"></i> Diagnóstico sin costo</span>
+          <span><i class="fa-solid fa-check"></i> Python & Google Cloud Developer</span>
+          <span><i class="fa-solid fa-check"></i> Código 100% propio y seguro</span>
         </div>
       </div>
       
@@ -167,6 +172,7 @@
     </div>
   </section>
 
+
   <!-- ==========================================================================
        PORTFOLIO (SUCCESS CASES) SECTION
        ========================================================================== -->
@@ -187,6 +193,10 @@
             <p class="portfolio-description">
               Migración de planillas tradicionales a un sistema centralizado inter-áreas. Conectamos la información de distintos departamentos en tiempo real bajo una base de datos segura y una interfaz ágil. Se eliminaron procesos manuales redundantes y se agilizó el flujo de comunicación.
             </p>
+            <div class="portfolio-metrics">
+              <span class="portfolio-metric-badge"><i class="fa-solid fa-chart-line"></i> 100% Digitalizado</span>
+              <span class="portfolio-metric-badge"><i class="fa-solid fa-clock"></i> Acceso en segundos</span>
+            </div>
             <div class="benefit-box">
               <div class="benefit-icon">
                 <i class="fa-solid fa-circle-check"></i>
@@ -213,6 +223,10 @@
             <p class="portfolio-description">
               Generador automático de estructuras de almacenamiento. Software a medida que procesa listados de texto o extrae datos desde capturas de pantalla para estructurar y crear cientos de directorios de clientes organizados al instante.
             </p>
+            <div class="portfolio-metrics">
+              <span class="portfolio-metric-badge"><i class="fa-solid fa-business-time"></i> -40 horas / mes</span>
+              <span class="portfolio-metric-badge"><i class="fa-solid fa-bullseye"></i> Precisión absoluta</span>
+            </div>
             <div class="benefit-box">
               <div class="benefit-icon">
                 <i class="fa-solid fa-circle-check"></i>
@@ -233,6 +247,10 @@
             <p class="portfolio-description">
               Compilador inteligente de expedientes PDF. Sistema que automatiza el ensamblaje, ordenamiento y numeración de archivos. Cuenta con un motor de validación lógica para comprobar la existencia de documentos requeridos (como facturas) antes de cerrar el expediente.
             </p>
+            <div class="portfolio-metrics">
+              <span class="portfolio-metric-badge"><i class="fa-solid fa-gauge-high"></i> 90% más rápido</span>
+              <span class="portfolio-metric-badge"><i class="fa-solid fa-shield-halved"></i> 0% error humano</span>
+            </div>
             <div class="benefit-box">
               <div class="benefit-icon">
                 <i class="fa-solid fa-circle-check"></i>
@@ -285,32 +303,140 @@
   </section>
 
   <!-- ==========================================================================
+       FAQS SECTION
+       ========================================================================== -->
+  <section id="faqs" class="section bg-light-alt">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-subtitle">Preguntas Frecuentes</span>
+        <h2 class="section-title">Respuestas a dudas comunes</h2>
+        <p>Entiende cómo trabajo, la seguridad de tus datos y el alcance de las automatizaciones.</p>
+      </div>
+
+      <div class="faq-accordion reveal">
+        <!-- FAQ 1 -->
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>¿Es seguro integrar mis planillas de Google Sheets con Python?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              <p>Totalmente. La conexión se realiza utilizando las APIs oficiales de Google y credenciales de cuenta de servicio cifradas. Solo se accede a los documentos que tú autorices y el código se ejecuta bajo estándares de seguridad recomendados.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>¿Requiere el pago de licencias mensuales o servidores costosos?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              <p>En la gran mayoría de los casos, no. Aprovecho el ecosistema de Google Apps Script que es 100% gratuito, o ejecuto scripts de Python de forma local o en capas gratuitas de servicios en la nube. Te propondré la opción más rentable y escalable para tu caso.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>¿Qué pasa si Google actualiza sus herramientas y el código falla?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              <p>Todas las soluciones se entregan con documentación clara y manejo de errores (logs) para saber exactamente qué falló. Además, ofrezco un periodo de garantía de soporte tras la entrega del proyecto para corregir cualquier desajuste sin costo adicional.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>¿Cómo se realiza el diagnóstico inicial gratuito?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              <p>Agendamos una breve reunión virtual de 15 minutos. Me compartes tu pantalla, me muestras el flujo manual actual y te digo de inmediato si es automatizable, cuánto tiempo te ahorrará y qué herramientas necesitamos utilizar.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
        CONTACT SECTION
        ========================================================================== -->
   <section id="contacto" class="section">
     <div class="container">
       <div class="contact-card reveal">
-        <span class="section-subtitle">¿Empezamos?</span>
-        <h2 class="contact-title">Solicita un Diagnóstico de Procesos Gratuito</h2>
-        <p class="contact-description">
-          Conversemos durante 15 minutos para analizar qué tarea manual te está consumiendo tiempo. Evaluaré tu proceso y te propondré la mejor arquitectura técnica para automatizarlo de forma escalable.
-        </p>
-        
-        <div class="contact-actions">
-          <a href="https://wa.me/2235449927" target="_blank" class="btn btn-whatsapp">
-            <i class="fa-brands fa-whatsapp"></i> Escríbeme por WhatsApp
-          </a>
-          
-          <div class="email-copy-wrapper">
-            <div class="email-btn-group">
-              <a href="mailto:leandromsesto@gmail.com" class="email-link" id="email-link">
-                <i class="fa-regular fa-envelope"></i> leandromsesto@gmail.com
+        <div class="contact-grid-layout">
+          <!-- Info Column -->
+          <div class="contact-info">
+            <span class="section-subtitle">¿Empezamos?</span>
+            <h2 class="contact-title">Solicita un Diagnóstico Gratuito</h2>
+            <p class="contact-description">
+              Conversemos durante 15 minutos para analizar qué tarea manual te está consumiendo tiempo. Evaluaré tu proceso y te propondré la mejor arquitectura técnica para automatizarlo de forma escalable.
+            </p>
+            
+            <div class="contact-actions-vertical">
+              <a href="https://wa.me/2235449927" target="_blank" class="btn btn-whatsapp w-full">
+                <i class="fa-brands fa-whatsapp"></i> Escríbeme por WhatsApp
               </a>
-              <button class="btn-copy" id="btn-copy" aria-label="Copiar email" title="Copiar email al portapapeles">
-                <i class="fa-regular fa-copy"></i>
-              </button>
+              
+              <div class="email-copy-wrapper">
+                <div class="email-btn-group">
+                  <a href="mailto:leandromsesto@gmail.com" class="email-link" id="email-link">
+                    <i class="fa-regular fa-envelope"></i> leandromsesto@gmail.com
+                  </a>
+                  <button class="btn-copy" id="btn-copy" aria-label="Copiar email" title="Copiar email al portapapeles">
+                    <i class="fa-regular fa-copy"></i>
+                  </button>
+                </div>
+                <span class="tooltip" id="copy-tooltip">¡Copiado!</span>
+              </div>
             </div>
-            <span class="tooltip" id="copy-tooltip">¡Copiado!</span>
+          </div>
+          
+          <!-- Form Column -->
+          <div class="contact-form-wrapper">
+            <form id="contact-form" class="contact-form" autocomplete="on">
+              <div class="form-group">
+                <label for="form-name" class="form-label">Nombre</label>
+                <input type="text" id="form-name" class="form-input" placeholder="Tu nombre completo" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="form-email" class="form-label">Email</label>
+                <input type="email" id="form-email" class="form-input" placeholder="tu@correo.com" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="form-role" class="form-label">Área / Puesto</label>
+                <input type="text" id="form-role" class="form-input" placeholder="Ej. Operaciones, Ventas, Admin" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="form-message" class="form-label">Proceso manual a automatizar</label>
+                <textarea id="form-message" class="form-input form-textarea" placeholder="Ej: Pasar datos de PDFs recibidos por mail a una planilla de Google Sheets..." required></textarea>
+              </div>
+              
+              <button type="submit" class="btn btn-primary w-full" id="btn-submit-form">
+                <span>Enviar Solicitud</span> <i class="fa-solid fa-paper-plane"></i>
+              </button>
+            </form>
+            <div id="form-success" class="form-success-message" style="display: none;">
+              <div class="success-icon">
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
+              <h3>¡Solicitud Recibida!</h3>
+              <p>Me pondré en contacto contigo en las próximas 24 horas hábiles para coordinar el diagnóstico gratuito.</p>
+            </div>
           </div>
         </div>
       </div>
