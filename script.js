@@ -264,4 +264,70 @@ document.addEventListener('DOMContentLoaded', () => {
     animate();
   }
 
+
+  // ==========================================================================
+  // 8. FAQ ACCORDION LOGIC
+  // ==========================================================================
+  const faqQuestions = document.querySelectorAll('.faq-question');
+  faqQuestions.forEach(question => {
+    question.addEventListener('click', () => {
+      const answer = question.nextElementSibling;
+      const isExpanded = question.getAttribute('aria-expanded') === 'true';
+      
+      // Close other FAQ items
+      faqQuestions.forEach(otherQuestion => {
+        if (otherQuestion !== question) {
+          otherQuestion.setAttribute('aria-expanded', 'false');
+          otherQuestion.nextElementSibling.style.maxHeight = null;
+        }
+      });
+      
+      // Toggle current item
+      if (isExpanded) {
+        question.setAttribute('aria-expanded', 'false');
+        answer.style.maxHeight = null;
+      } else {
+        question.setAttribute('aria-expanded', 'true');
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+      }
+    });
+  });
+
+  // ==========================================================================
+  // 9. B2B CONTACT FORM MOCK SUBMISSION
+  // ==========================================================================
+  const contactForm = document.getElementById('contact-form');
+  const formSuccess = document.getElementById('form-success');
+  const btnSubmit = document.getElementById('btn-submit-form');
+  
+  if (contactForm && formSuccess) {
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      
+      const emailInput = document.getElementById('form-email');
+      const email = emailInput.value.trim();
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      
+      if (!emailRegex.test(email)) {
+        emailInput.style.borderColor = 'var(--error)';
+        return;
+      }
+      
+      // Reset input style
+      emailInput.style.borderColor = '';
+      
+      // Show loading state
+      if (btnSubmit) {
+        btnSubmit.disabled = true;
+        btnSubmit.innerHTML = '<span>Enviando...</span> <i class="fa-solid fa-spinner fa-spin"></i>';
+        
+        // Simulate API call (1.5 seconds)
+        setTimeout(() => {
+          contactForm.style.display = 'none';
+          formSuccess.style.display = 'block';
+        }, 1500);
+      }
+    });
+  }
+
 });
