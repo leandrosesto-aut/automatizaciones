@@ -294,7 +294,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ==========================================================================
-  // 9. B2B CONTACT FORM MOCK SUBMISSION
+  // 9. B2B CONTACT FORM REAL SUBMISSION (API FORMSUBMIT)
   // ==========================================================================
   const contactForm = document.getElementById('contact-form');
   const formSuccess = document.getElementById('form-success');
@@ -318,14 +318,47 @@ document.addEventListener('DOMContentLoaded', () => {
       
       // Show loading state
       if (btnSubmit) {
+        const originalBtnText = btnSubmit.innerHTML;
         btnSubmit.disabled = true;
         btnSubmit.innerHTML = '<span>Enviando...</span> <i class="fa-solid fa-spinner fa-spin"></i>';
         
-        // Simulate API call (1.5 seconds)
-        setTimeout(() => {
-          contactForm.style.display = 'none';
-          formSuccess.style.display = 'block';
-        }, 1500);
+        // Recopilamos los datos del formulario
+        const payload = {
+            Nombre: document.getElementById('form-name').value.trim(),
+            Email: email,
+            Area_Puesto: document.getElementById('form-role').value.trim(),
+            Mensaje: document.getElementById('form-message').value.trim(),
+            _subject: "Nuevo lead web | Leandro Sesto Automatizaciones"
+        };
+
+        // Enviamos los datos mediante Fetch a la API gratuita
+        fetch("https://formsubmit.co/ajax/leandromsesto@gmail.com", {
+            method: "POST",
+            headers: { 
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify(payload)
+        })
+        .then(response => response.json())
+        .then(data => {
+            if(data.success === "true" || data.success === true) {
+                contactForm.style.display = 'none';
+                formSuccess.style.display = 'block';
+            } else {
+                throw new Error("Respuesta inesperada de la API");
+            }
+        })
+        .catch(error => {
+            console.error('Error enviando el formulario:', error);
+            btnSubmit.innerHTML = '<span>Error al enviar</span> <i class="fa-solid fa-triangle-exclamation"></i>';
+            
+            // Restauramos el botón después de 3 segundos para que puedan reintentar
+            setTimeout(() => {
+                btnSubmit.innerHTML = originalBtnText;
+                btnSubmit.disabled = false;
+            }, 3000);
+        });
       }
     });
   }
