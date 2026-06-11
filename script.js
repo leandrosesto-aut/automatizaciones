@@ -12,7 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
     navToggle.addEventListener('click', () => {
       navMenu.classList.toggle('open');
       
-      // Change icon bars to close
       const icon = navToggle.querySelector('i');
       if (navMenu.classList.contains('open')) {
         icon.className = 'fa-solid fa-xmark';
@@ -21,7 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    // Close menu when clicking a link
     const navLinks = navMenu.querySelectorAll('a');
     navLinks.forEach(link => {
       link.addEventListener('click', () => {
@@ -47,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('active');
-        observer.unobserve(entry.target); // Stop observing once revealed
+        observer.unobserve(entry.target); 
       }
     });
   }, {
@@ -68,7 +66,6 @@ document.addEventListener('DOMContentLoaded', () => {
     
     sections.forEach(section => {
       const sectionTop = section.offsetTop;
-      const sectionHeight = section.clientHeight;
       if (window.scrollY >= (sectionTop - 150)) {
         current = section.getAttribute('id');
       }
@@ -90,15 +87,10 @@ document.addEventListener('DOMContentLoaded', () => {
   if (btnCopy && tooltip && emailLink) {
     btnCopy.addEventListener('click', (e) => {
       e.preventDefault();
-      
       const emailText = emailLink.innerText.trim();
       
-      // Use Clipboard API
       navigator.clipboard.writeText(emailText).then(() => {
-        // Show Tooltip
         tooltip.classList.add('show');
-        
-        // Hide Tooltip after 2 seconds
         setTimeout(() => {
           tooltip.classList.remove('show');
         }, 2000);
@@ -114,10 +106,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const ctx = canvas.getContext('2d');
     let particlesArray = [];
     
-    // Set canvas size
     function resizeCanvas() {
       canvas.width = window.innerWidth;
-      // Limit canvas animation height to hero area for better performance
       const heroSection = document.getElementById('hero');
       canvas.height = heroSection ? heroSection.offsetHeight : window.innerHeight;
     }
@@ -129,16 +119,15 @@ document.addEventListener('DOMContentLoaded', () => {
     
     resizeCanvas();
 
-    // Mouse interactive coordinates
     const mouse = {
       x: null,
       y: null,
-      radius: 100 // Area of influence
+      radius: 100 
     };
 
     window.addEventListener('mousemove', (event) => {
       mouse.x = event.x;
-      mouse.y = event.y + window.scrollY; // adjust for scroll
+      mouse.y = event.y + window.scrollY; 
     });
 
     window.addEventListener('mouseout', () => {
@@ -146,7 +135,6 @@ document.addEventListener('DOMContentLoaded', () => {
       mouse.y = null;
     });
 
-    // Particle Class
     class Particle {
       constructor(x, y, directionX, directionY, size, color) {
         this.x = x;
@@ -157,7 +145,6 @@ document.addEventListener('DOMContentLoaded', () => {
         this.color = color;
       }
       
-      // Draw single particle
       draw() {
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
@@ -165,9 +152,7 @@ document.addEventListener('DOMContentLoaded', () => {
         ctx.fill();
       }
       
-      // Update position and interactions
       update() {
-        // Bounce off bounds
         if (this.x > canvas.width || this.x < 0) {
           this.directionX = -this.directionX;
         }
@@ -175,7 +160,6 @@ document.addEventListener('DOMContentLoaded', () => {
           this.directionY = -this.directionY;
         }
         
-        // Mouse interact (push away)
         if (mouse.x !== null && mouse.y !== null) {
           let dx = mouse.x - this.x;
           let dy = mouse.y - this.y;
@@ -197,36 +181,29 @@ document.addEventListener('DOMContentLoaded', () => {
           }
         }
         
-        // Regular speed drift
         this.x += this.directionX;
         this.y += this.directionY;
-        
         this.draw();
       }
     }
 
-    // Populate particles
     function initParticles() {
       particlesArray = [];
-      // Dynamic count based on screen size
       let numberOfParticles = (canvas.width * canvas.height) / 18000;
-      numberOfParticles = Math.min(numberOfParticles, 80); // Cap at 80 particles
+      numberOfParticles = Math.min(numberOfParticles, 80); 
       
       for (let i = 0; i < numberOfParticles; i++) {
-        let size = (Math.random() * 2) + 1; // 1 to 3px
+        let size = (Math.random() * 2) + 1; 
         let x = (Math.random() * ((canvas.width - size * 2) - size * 2)) + size * 2;
         let y = (Math.random() * ((canvas.height - size * 2) - size * 2)) + size * 2;
-        let directionX = (Math.random() * 0.4) - 0.2; // slow drift speed
+        let directionX = (Math.random() * 0.4) - 0.2; 
         let directionY = (Math.random() * 0.4) - 0.2;
         
-        // Alternate colors between Indigo and Teal (subtle for light background)
         let color = i % 2 === 0 ? 'rgba(79, 70, 229, 0.1)' : 'rgba(13, 148, 136, 0.1)';
-        
         particlesArray.push(new Particle(x, y, directionX, directionY, size, color));
       }
     }
 
-    // Connect particles with lines
     function connectParticles() {
       let opacityValue = 1;
       for (let a = 0; a < particlesArray.length; a++) {
@@ -248,14 +225,11 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
 
-    // Animation Loop
     function animate() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-      
       for (let i = 0; i < particlesArray.length; i++) {
         particlesArray[i].update();
       }
-      
       connectParticles();
       requestAnimationFrame(animate);
     }
@@ -263,7 +237,6 @@ document.addEventListener('DOMContentLoaded', () => {
     initParticles();
     animate();
   }
-
 
   // ==========================================================================
   // 8. FAQ ACCORDION LOGIC
@@ -274,7 +247,6 @@ document.addEventListener('DOMContentLoaded', () => {
       const answer = question.nextElementSibling;
       const isExpanded = question.getAttribute('aria-expanded') === 'true';
       
-      // Close other FAQ items
       faqQuestions.forEach(otherQuestion => {
         if (otherQuestion !== question) {
           otherQuestion.setAttribute('aria-expanded', 'false');
@@ -282,7 +254,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       });
       
-      // Toggle current item
       if (isExpanded) {
         question.setAttribute('aria-expanded', 'false');
         answer.style.maxHeight = null;
@@ -312,7 +283,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       
       if (!emailRegex.test(email)) {
-        emailInput.style.borderColor = 'var(--error)';
+        emailInput.style.borderColor = '#dc2626'; // Red border
         return;
       }
       
@@ -330,26 +301,21 @@ document.addEventListener('DOMContentLoaded', () => {
             Mensaje: document.getElementById('form-message').value.trim()
         };
 
-        // Enviamos la petición por POST hacia la aplicación web de Google
         fetch(APPS_SCRIPT_URL, {
             method: "POST",
-            mode: "cors", // Forzamos manejo de políticas CORS cruzadas
+            mode: "no-cors", // <-- Solución al error de bloqueo CORS
             headers: { 
                 'Content-Type': 'text/plain;charset=utf-8' 
             },
             body: JSON.stringify(payload)
         })
-        .then(response => response.json())
-        .then(data => {
-            if(data.success === true) {
-                contactForm.style.display = 'none';
-                formSuccess.style.display = 'block';
-            } else {
-                throw new Error(data.error || "Fallo en la ejecución del Script.");
-            }
+        .then(() => {
+            // Al ser no-cors la respuesta es opaca. Si resuelve la promesa, se envió.
+            contactForm.style.display = 'none';
+            formSuccess.style.display = 'block';
         })
         .catch(error => {
-            console.error('Error enviando datos a Google Apps Script:', error);
+            console.error('Error enviando datos:', error);
             btnSubmit.innerHTML = '<span>Error al enviar</span> <i class="fa-solid fa-triangle-exclamation"></i>';
             
             setTimeout(() => {
