@@ -294,12 +294,15 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ==========================================================================
-  // 9. B2B CONTACT FORM REAL SUBMISSION (API FORMSUBMIT)
+  // 9. B2B CONTACT FORM REAL SUBMISSION (GOOGLE APPS SCRIPT)
   // ==========================================================================
   const contactForm = document.getElementById('contact-form');
   const formSuccess = document.getElementById('form-success');
   const btnSubmit = document.getElementById('btn-submit-form');
   
+  // REEMPLAZA ESTA CADENA CON LA URL QUE COPIASTE EN APPS SCRIPT
+  const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwziGXvZC5wgPpvCDEt0q4aJzvr-PBDw2XV1zEbrLvj6QMfQoKRKyPOsOyKBndAHpq0Vg/exec";
+
   if (contactForm && formSuccess) {
     contactForm.addEventListener('submit', (e) => {
       e.preventDefault();
@@ -313,47 +316,42 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
       
-      // Reset input style
       emailInput.style.borderColor = '';
       
-      // Show loading state
       if (btnSubmit) {
         const originalBtnText = btnSubmit.innerHTML;
         btnSubmit.disabled = true;
         btnSubmit.innerHTML = '<span>Enviando...</span> <i class="fa-solid fa-spinner fa-spin"></i>';
         
-        // Recopilamos los datos del formulario
         const payload = {
             Nombre: document.getElementById('form-name').value.trim(),
             Email: email,
             Area_Puesto: document.getElementById('form-role').value.trim(),
-            Mensaje: document.getElementById('form-message').value.trim(),
-            _subject: "Nuevo lead web | Leandro Sesto Automatizaciones"
+            Mensaje: document.getElementById('form-message').value.trim()
         };
 
-        // Enviamos los datos mediante Fetch a la API gratuita
-        fetch("https://formsubmit.co/ajax/leandromsesto@gmail.com", {
+        // Enviamos la petición por POST hacia la aplicación web de Google
+        fetch(APPS_SCRIPT_URL, {
             method: "POST",
+            mode: "cors", // Forzamos manejo de políticas CORS cruzadas
             headers: { 
-                'Content-Type': 'application/json',
-                'Accept': 'application/json'
+                'Content-Type': 'text/plain;charset=utf-8' 
             },
             body: JSON.stringify(payload)
         })
         .then(response => response.json())
         .then(data => {
-            if(data.success === "true" || data.success === true) {
+            if(data.success === true) {
                 contactForm.style.display = 'none';
                 formSuccess.style.display = 'block';
             } else {
-                throw new Error("Respuesta inesperada de la API");
+                throw new Error(data.error || "Fallo en la ejecución del Script.");
             }
         })
         .catch(error => {
-            console.error('Error enviando el formulario:', error);
+            console.error('Error enviando datos a Google Apps Script:', error);
             btnSubmit.innerHTML = '<span>Error al enviar</span> <i class="fa-solid fa-triangle-exclamation"></i>';
             
-            // Restauramos el botón después de 3 segundos para que puedan reintentar
             setTimeout(() => {
                 btnSubmit.innerHTML = originalBtnText;
                 btnSubmit.disabled = false;
