@@ -271,8 +271,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const formSuccess = document.getElementById('form-success');
   const btnSubmit = document.getElementById('btn-submit-form');
   
-  // REEMPLAZA ESTA CADENA CON LA URL QUE COPIASTE EN APPS SCRIPT
-  const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwziGXvZC5wgPpvCDEt0q4aJzvr-PBDw2XV1zEbrLvj6QMfQoKRKyPOsOyKBndAHpq0Vg/exec";
+  // REEMPLAZA ESTA CADENA CON LA NUEVA URL QUE COPIASTE
+  const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbz6KVLgl1883LoYrlMZevmGXoLdN4JHEQzyDO5Eq7NV731Vk7yM1dOqorNq7kPSnOCgig/exec";
 
   if (contactForm && formSuccess) {
     contactForm.addEventListener('submit', (e) => {
@@ -283,7 +283,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       
       if (!emailRegex.test(email)) {
-        emailInput.style.borderColor = '#dc2626'; // Red border
+        emailInput.style.borderColor = '#dc2626';
         return;
       }
       
@@ -294,23 +294,23 @@ document.addEventListener('DOMContentLoaded', () => {
         btnSubmit.disabled = true;
         btnSubmit.innerHTML = '<span>Enviando...</span> <i class="fa-solid fa-spinner fa-spin"></i>';
         
-        const payload = {
+        // Empaquetamos los datos en formato nativo de formulario (evita CORS avanzado)
+        const formParams = new URLSearchParams({
             Nombre: document.getElementById('form-name').value.trim(),
             Email: email,
             Area_Puesto: document.getElementById('form-role').value.trim(),
             Mensaje: document.getElementById('form-message').value.trim()
-        };
+        });
 
         fetch(APPS_SCRIPT_URL, {
             method: "POST",
-            mode: "no-cors", // <-- Solución al error de bloqueo CORS
+            mode: "no-cors",
             headers: { 
-                'Content-Type': 'text/plain;charset=utf-8' 
+                'Content-Type': 'application/x-www-form-urlencoded' 
             },
-            body: JSON.stringify(payload)
+            body: formParams.toString()
         })
         .then(() => {
-            // Al ser no-cors la respuesta es opaca. Si resuelve la promesa, se envió.
             contactForm.style.display = 'none';
             formSuccess.style.display = 'block';
         })
