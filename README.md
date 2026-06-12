@@ -1,28 +1,41 @@
-# Desarrollo de Automatizaciones y Agentes de IA | Leandro Sesto
+# Optimización y Automatización de Negocios | Leandro Sesto
 
 [![Visitar Web](https://img.shields.io/badge/Visitar_Portafolio-Sitio_Oficial-blue?style=for-the-badge)](https://leandrosesto-aut.github.io/automatizaciones/)
 
-Bienvenido al repositorio central de mis proyectos de automatización. Este espacio está dedicado al desarrollo de herramientas orientadas a optimizar flujos de trabajo mediante scripts precisos, agentes de inteligencia artificial y procesamiento de datos.
+Bienvenido al repositorio oficial de mis soluciones empresariales. Mi enfoque como desarrollador está orientado 100% al valor corporativo: analizo y modelo procesos para eliminar ineficiencias, transformándolos en flujos autónomos que devuelven tiempo productivo a tu equipo.
 
-🌐 **Web oficial y portafolio de soluciones:** [leandrosesto-aut.github.io/automatizaciones](https://leandrosesto-aut.github.io/automatizaciones/)
+🌐 **Web oficial para agendar un diagnóstico sin costo:** [leandrosesto-aut.github.io/automatizaciones](https://leandrosesto-aut.github.io/automatizaciones/)
 
-## 🚀 Enfoque Técnico y Soluciones
+## 🚀 El costo invisible del trabajo manual
 
-El objetivo principal de estos desarrollos es eliminar tareas repetitivas mediante lógica automatizada robusta, priorizando interfaces minimalistas funcionales y prescindiendo de intervenciones manuales innecesarias.
+Hacer tareas repetitivas a mano frena el crecimiento de las empresas e introduce ineficiencias críticas. Mis desarrollos atacan tres problemas operativos fundamentales:
+* **Pérdida de Tiempo:** Eliminamos el copiado y pegado manual entre planillas (Excel, bases de datos o sistemas de gestión internos).
+* **Errores Operativos:** Erradicamos las equivocaciones humanas inevitables en la carga de datos que afectan el control de costos.
+* **Crecimiento Estancado:** Destruimos los cuellos de botella administrativos para que tu personal se enfoque en ventas o innovación.
 
-### 🛠️ Proyectos y Capacidades Destacadas
+## 🏆 Casos de Éxito y Soluciones Desarrolladas
 
-*   **Automatización Audiovisual y Redes:** Creación de pipelines para edición de video, incluyendo recorte automático de silencios, generación de subtítulos dinámicos (con lógica de transcripción de números a texto) y publicación automatizada en plataformas mediante herramientas como Selenium.
-*   **Procesamiento de Datos y Calculadores:** Sistemas de distribución automática, como calculadores de turnos profesionales, asegurando compatibilidad estricta con archivos de gestión empresarial en formato `.xls`.
-*   **Integración de Inteligencia Artificial:** Implementación de modelos avanzados para mejora de resolución (ej. escalado facial y reducción de pixelado) y procesamiento inteligente de información.
+He transformado procesos manuales complejos en flujos de trabajo autónomos y seguros:
 
-## 💻 Stack Tecnológico Principal
+1. **Generador de Expedientes (Procesamiento PDF y OCR):** Compilador inteligente que ensambla, ordena y numera archivos. Incluye un motor de validación lógica para comprobar la existencia de documentos requeridos (ej. facturas). **Impacto:** 90% más rápido, 0% de error humano.
+2. **Creador de Carpetas (Automatización de Escritorio):** Generador automático de estructuras de almacenamiento masivas a partir de listas de texto o capturas de pantalla. **Impacto:** Ahorro de más de 40 horas mensuales de trabajo rutinario.
+3. **Dashboard Técnico (Integración de Sistemas):** Migración de planillas tradicionales a un sistema centralizado inter-áreas. **Impacto:** Digitalización total, acceso a datos en segundos y eliminación del uso de papel.
 
-*   **Lenguajes:** Python, Java, HTML.
-*   **Técnicas y Herramientas:** Web Scraping, automatización de navegadores, gestión de APIs, y diseño de lógica para agentes autónomos.
+## 💻 Stack Tecnológico y Competencias
 
-## 📬 Contacto
+Para garantizar soluciones rentables, utilizo código propio apoyado en infraestructuras gratuitas y escalables:
+* **Lenguajes:** Python (ETL / Automatización de lógicas), Google Apps Script.
+* **Ecosistema:** APIs oficiales, Google Sheets, Google Drive.
+* **Capacidades Especiales:** Procesamiento avanzado de datos, creación de agentes autónomos y extracción estructurada de información.
 
-Si buscas optimizar procesos técnicos, reducir horas de trabajo manual o integrar soluciones de IA en tu flujo de trabajo, visita mi web para conocer más detalles.
+## 🛡️ Seguridad, Privacidad y Garantía
 
-🔗 [leandrosesto-aut.github.io/automatizaciones](https://leandrosesto-aut.github.io/automatizaciones/)
+* **Privacidad Absoluta:** Conexiones mediante credenciales cifradas y APIs oficiales de Google. Solo se accede a los documentos que tú autorices.
+* **Costo de Infraestructura Cero:** Priorizo el ecosistema de Google Apps Script (100% gratuito) o la ejecución de scripts en capas gratuitas para maximizar el retorno de inversión.
+* **Respaldo Técnico:** Todas las herramientas incluyen documentación, registro de errores (logs) y un periodo de garantía de soporte posterior a la entrega.
+
+## 📬 Contacto y Diagnóstico
+
+¿Tienes un proceso manual que te consume tiempo? Agendemos una reunión de 15 minutos. Analizaré tu flujo en pantalla compartida y te propondré la arquitectura técnica ideal.
+
+🔗 [Portafolio Oficial](https://leandrosesto-aut.github.io/automatizaciones/) | 📱 [WhatsApp Directo](https://wa.me/2235449927) | ✉️ leandromsesto@gmail.com
