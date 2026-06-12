@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://leandrosesto-aut.github.io/automatizaciones/sitemap.xml
