@@ -38,7 +38,11 @@ A diferencia de los servicios online, este unificador procesa los archivos direc
 * **Control visual:** Permite reorganizar las páginas visualmente, eliminar hojas innecesarias y rotar documentos en intervalos de 90° antes de unificarlos.
 * **Cero dependencias:** Funciona 100% offline, sin necesidad de conexión a internet ni suscripciones.
 
-👉 **[Descargar Unificador de PDF (v1.0.0)](REEMPLAZAR_POR_TU_ENLACE_AQUI)**
+<p align="center">
+  <!-- <img src="https://github.com/user-attachments/assets/5fdb1bf6-83e9-4427-a9e1-debf347a3d16" alt="Captura de pantalla del Unificador de PDF" width="700"> -->
+</p>
+
+👉 **[Descargar Unificador de PDF (v1.0.0)](REEMPLAZAR_POR_TU_ENLACE_DE_DESCARGA_AQUI)**
 
 ---
 
