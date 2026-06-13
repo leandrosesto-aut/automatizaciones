@@ -9,7 +9,7 @@ Bienvenido al repositorio oficial de mis soluciones empresariales. Mi enfoque co
 ## 🚀 El costo invisible del trabajo manual
 
 Hacer tareas repetitivas a mano frena el crecimiento de las empresas e introduce ineficiencias críticas. Mis desarrollos atacan tres problemas operativos fundamentales:
-* **Pérdida de Tiempo:** Eliminamos el copiado y pegado manual entre planillas (Excel, bases de datos o sistemas de gestión internos).
+* **Pérdida de Tiempo:** Eliminamos el copiado y pegado manual entre planillas (garantizando compatibilidad estricta con formatos `.xls`), bases de datos o sistemas de gestión internos.
 * **Errores Operativos:** Erradicamos las equivocaciones humanas inevitables en la carga de datos que afectan el control de costos.
 * **Crecimiento Estancado:** Destruimos los cuellos de botella administrativos para que tu personal se enfoque en ventas o innovación.
 
@@ -28,21 +28,21 @@ He transformado procesos manuales complejos en flujos de trabajo autónomos y se
 Como demostración de mi filosofía de trabajo orientada a la eficiencia y privacidad, he liberado esta herramienta de escritorio para uso público. Está diseñada para superar las limitaciones de las plataformas web tradicionales.
 
 ![Unificador PDF](https://img.shields.io/badge/Estado-Estable_v1.0-success?style=for-the-badge)
-[![Descargar Gratis](https://img.shields.io/badge/Descargar_.EXE-Windows_10/11-blue?style=for-the-badge&logo=windows)](sha256:468105e422e4fee36e8535a9bc02632dbb609b3c4b606fd11b7a889fa901afe3)
+[![Descargar Gratis](https://img.shields.io/badge/Descargar_.EXE-Windows_10/11-blue?style=for-the-badge&logo=windows)](https://github.com/leandrosesto-aut/automatizaciones/releases/tag/v1.0.0)
 
 ### ¿Por qué utilizar esta herramienta?
 A diferencia de los servicios online, este unificador procesa los archivos directamente utilizando el hardware de tu computadora, garantizando **privacidad absoluta** al no subir documentos empresariales sensibles a servidores de terceros.
 
-* **Flujo de trabajo:** Interfaz minimalista con soporte nativo de *Drag & Drop* (Arrastrar y suelta tus archivos directo en la ventana).
+* **Flujo de trabajo:** Interfaz minimalista con soporte nativo de *Drag & Drop* (Arrastra y suelta tus archivos directo en la ventana).
 * **Capacidad de procesamiento:** **Sin límite artificial.** Mientras las herramientas online limitan a 20 archivos, este motor puede procesar y combinar **+50 PDFs simultáneos** y miles de páginas en cuestión de segundos, dependiendo únicamente de tu memoria RAM.
 * **Control visual:** Permite reorganizar las páginas visualmente, eliminar hojas innecesarias y rotar documentos en intervalos de 90° antes de unificarlos.
 * **Cero dependencias:** Funciona 100% offline, sin necesidad de conexión a internet ni suscripciones.
 
 <p align="center">
-  <!-- <img src="https://github.com/user-attachments/assets/5fdb1bf6-83e9-4427-a9e1-debf347a3d16" alt="Captura de pantalla del Unificador de PDF" width="700"> -->
+  <img src="https://github.com/user-attachments/assets/5fdb1bf6-83e9-4427-a9e1-debf347a3d16" alt="Captura de pantalla del Unificador de PDF" width="700">
 </p>
 
-👉 **[Descargar Unificador de PDF (v1.0.0)](REEMPLAZAR_POR_TU_ENLACE_DE_DESCARGA_AQUI)**
+👉 **[Descargar Unificador de PDF (v1.0.0)](https://github.com/leandrosesto-aut/automatizaciones/releases/tag/v1.0.0)**
 
 ---
 
