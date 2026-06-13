@@ -278,7 +278,7 @@ img {
   overflow: hidden;
 }
 
-/* Background Glowing Blobs (Atenduated for Light Mode) */
+/* Background Glowing Blobs */
 .glow-blob {
   position: absolute;
   border-radius: 50%;
@@ -920,33 +920,19 @@ img {
   background: #f8fafc;
 }
 
+/* Forzado de centrado absoluto para el contenedor principal en escritorio */
 .footer .container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 20px;
+  width: 100%;
 }
 
 .footer-copy {
   font-size: 0.9rem;
   color: var(--text-muted);
-}
-
-.footer-brand {
-  font-weight: 700;
-  font-size: 1rem;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  color: var(--text-primary);
-}
-
-.footer-brand span {
-  width: 6px;
-  height: 6px;
-  background: var(--gradient-primary);
-  border-radius: 50%;
+  text-align: center;
+  width: 100%;
 }
 
 /* ==========================================================================
@@ -1379,13 +1365,16 @@ img {
     height: 48px;
   }
   
-  /* Footer */
+  /* Footer Mobile - Forzado de centrado absoluto */
   .footer .container {
+    display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+    width: 100%;
   }
 
-  
   /* Contact Responsive */
   .contact-grid-layout {
     grid-template-columns: 1fr;
