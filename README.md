@@ -1,4 +1,4 @@
-# Optimización y Automatización de Negocios | Leandro Sesto
+# Automatización de Procesos | Leandro Sesto
 
 [![Visitar Web](https://img.shields.io/badge/Visitar_Portafolio-Sitio_Oficial-blue?style=for-the-badge)](https://leandrosesto-aut.github.io/automatizaciones/)
 
