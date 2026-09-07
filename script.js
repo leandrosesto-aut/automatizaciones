@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 6. INTERACTIVE BACKGROUND CANVAS PARTICLES
+  // 6. INTERACTIVE BACKGROUND CANVAS PARTICLES (Adapted for Dark Mode)
   const canvas = document.getElementById('canvas-bg');
   if (canvas) {
     const ctx = canvas.getContext('2d');
@@ -199,7 +199,8 @@ document.addEventListener('DOMContentLoaded', () => {
         let directionX = (Math.random() * 0.4) - 0.2; 
         let directionY = (Math.random() * 0.4) - 0.2;
         
-        let color = i % 2 === 0 ? 'rgba(79, 70, 229, 0.1)' : 'rgba(13, 148, 136, 0.1)';
+        // Colores y opacidad adaptados al modo oscuro Corporate Slate
+        let color = i % 2 === 0 ? 'rgba(99, 102, 241, 0.3)' : 'rgba(20, 184, 166, 0.3)';
         particlesArray.push(new Particle(x, y, directionX, directionY, size, color));
       }
     }
@@ -214,7 +215,8 @@ document.addEventListener('DOMContentLoaded', () => {
           
           if (distance < 110) {
             opacityValue = 1 - (distance / 110);
-            ctx.strokeStyle = `rgba(79, 70, 229, ${opacityValue * 0.04})`;
+            // Líneas de conexión adaptadas para visibilidad
+            ctx.strokeStyle = `rgba(99, 102, 241, ${opacityValue * 0.15})`;
             ctx.lineWidth = 1;
             ctx.beginPath();
             ctx.moveTo(particlesArray[a].x, particlesArray[a].y);
@@ -271,7 +273,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const formSuccess = document.getElementById('form-success');
   const btnSubmit = document.getElementById('btn-submit-form');
   
-  // REEMPLAZA ESTA CADENA CON LA NUEVA URL QUE COPIASTE
+  // URL DE GOOGLE APPS SCRIPT
   const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbz6KVLgl1883LoYrlMZevmGXoLdN4JHEQzyDO5Eq7NV731Vk7yM1dOqorNq7kPSnOCgig/exec";
 
   if (contactForm && formSuccess) {
@@ -283,7 +285,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       
       if (!emailRegex.test(email)) {
-        emailInput.style.borderColor = '#dc2626';
+        emailInput.style.borderColor = '#ef4444'; // Rojo adaptado a dark mode
         return;
       }
       
@@ -294,7 +296,6 @@ document.addEventListener('DOMContentLoaded', () => {
         btnSubmit.disabled = true;
         btnSubmit.innerHTML = '<span>Enviando...</span> <i class="fa-solid fa-spinner fa-spin"></i>';
         
-        // Empaquetamos los datos en formato nativo de formulario (evita CORS avanzado)
         const formParams = new URLSearchParams({
             Nombre: document.getElementById('form-name').value.trim(),
             Email: email,
